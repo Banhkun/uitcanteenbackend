@@ -10,6 +10,7 @@ const e = require('express');
 const app = express();
 
 const mysqlStore = require('express-mysql-session')(session);
+let sessionStore; // Declare sessionStore outside the if block
 
 let db;
 if (process.env.JAWSDB_URL) {
